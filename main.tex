@@ -1,0 +1,160 @@
+\documentclass{article}
+\usepackage[a4paper]{geometry}
+
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\usepackage{amssymb}
+\newcommand{\lap}{\mathcal{L}}
+
+\usepackage{esdiff}
+
+\usepackage{amsmath}
+
+\begin{document}
+\noindent\textsf{\textbf{TABLE 1} Laplace Transform Pairs}\\
+\begin{tabular}{|C{1cm}|C{7cm}|C{5cm}|}
+\hline
+&\[f(t)\]&\[F(s)\]\\
+\hline
+1&\[\text{Unit impulse}\ \delta(t)\]&\[1\]\\
+\hline
+2&\[\text{Unit step}\ 1(t)\]&\[\frac{1}{s}\]\\
+\hline
+3&\[t\]&\[\frac{1}{s^2}\]\\
+\hline
+4&\[\frac{t^{n-1}}{(n-1)!} \qquad (n=1,2,3,\ \ldots)\]&\[\frac{1}{s^n}\]\\
+\hline
+5&\[t^n \qquad (n=1,2,3,\ \ldots)\]&\[\frac{n!}{s^{n+1}}\]\\
+\hline
+6&\[e^{-at}\]&\[\frac{1}{s+a}\]\\
+\hline
+7&\[te^{-at}\]&\[\frac{1}{(s+a)^2}\]\\
+\hline
+8&\[\frac{1}{(n-1)!}t^{n-1}e^{-at}\qquad(n=1,2,3,\ \ldots)\]&\[\frac{1}{(s+a)^{n}}\]\\
+\hline
+\end{tabular}
+
+\newpage
+
+\noindent\textsf{\textbf{TABLE 1} \textit{(continued)}}\\
+\begin{tabular}{|C{1cm}|C{7cm}|C{5cm}|}
+\hline
+&\[f(t)\]&\[F(s)\]\\
+\hline
+9&\[t^ne^{-at}\qquad(n=1,2,3,\ \ldots)\]&\[\frac{n!}{(s+a)^{n+1}}\]\\
+\hline
+10&\[\sin\omega t\]&\[\frac{\omega}{s^2+\omega^2}\]\\
+\hline
+11&\[\cos\omega t\]&\[\frac{s}{s^2+\omega^2}\]\\
+\hline
+12&\[\sinh\omega t\]&\[\frac{\omega}{s^2-\omega^2}\]\\
+\hline
+13&\[\cosh\omega t\]&\[\frac{s}{s^2-\omega^2}\]\\
+\hline
+14&\[\frac{1}{a}(1-e^{-at})\]&\[\frac{1}{s(s+a)}\]\\
+\hline
+15&\[\frac{1}{b-a}(e^{-at}-e^{-bt})\]&\[\frac{1}{(s+a)(s+b)}\]\\
+\hline
+16&\[\frac{1}{b-a}(be^{-bt}-ae^{-at})\]&\[\frac{s}{(s+a)(s+b)}\]\\
+\hline
+17&\[\frac{1}{ab}\left[1+\frac{1}{a-b}(be^{-at}-ae^{-bt})\right]\]&\[\frac{1}{s(s+a)(s+b)}\]\\
+\hline
+\end{tabular}
+
+\newpage
+
+\noindent\textsf{\textbf{TABLE 1} \textit{(continued)}}\\
+\begin{tabular}{|C{1cm}|C{7cm}|C{5cm}|}
+\hline
+&\[f(t)\]&\[F(s)\]\\
+\hline
+18&\[\frac{1}{a^2}(1-e^{-at}-ate^{-at})\]&\[\frac{1}{s(s+a)^2}\]\\
+\hline
+19&\[\frac{1}{a^2}(at-1+e^{-at})\]&\[\frac{1}{s^2(s+a)}\]\\
+\hline
+20&\[e^{-at}\sin\omega t\]&\[\frac{\omega}{(s+a)^2+\omega^2}\]\\
+\hline
+21&\[e^{-at}\cos\omega t\]&\[\frac{s+a}{(s+a)^2+\omega^2}\]\\
+\hline
+22&\[\frac{\omega_n}{\sqrt{1-\zeta^2}}e^{-\zeta\omega_nt}\sin\omega_n\sqrt{1-\zeta^2}t\]&\[\frac{\omega_n^2}{s^2+2\zeta\omega_ns+\omega_n^2}\]\\
+\hline
+23&\[-\frac{1}{\sqrt{1-\zeta^2}}e^{-\zeta\omega_nt}\sin(\omega_n\sqrt{1-\zeta^2}t-\phi)\]\[\phi=\tan^{-1}\frac{\sqrt{1-\zeta^2}}{\zeta}\]&\[\frac{s}{s^2+2\zeta\omega_ns+\omega_n^2}\]\\
+\hline
+24&\[1-\frac{1}{\sqrt{1-\zeta^2}}e^{-\zeta\omega_nt}\sin(\omega_n\sqrt{1-\zeta^2}t+\phi)\]\[\phi=\tan^{-1}\frac{\sqrt{1-\zeta^2}}{\zeta}\]&\[\frac{\omega_n^2}{s(s^2+2\zeta\omega_ns+\omega_n^2)}\]\\
+\hline
+\end{tabular}
+
+\newpage
+
+\noindent\textsf{\textbf{TABLE 1} \textit{(continued)}}\\
+\begin{tabular}{|C{1cm}|C{7cm}|C{5cm}|}
+\hline
+&\[f(t)\]&\[F(s)\]\\
+\hline
+25&\[1-\cos\omega t\]&\[\frac{\omega^2}{s(s^2+\omega^2)}\]\\
+\hline
+26&\[\omega t-\sin\omega t\]&\[\frac{\omega^3}{s^2(s^2+\omega^2)}\]\\
+\hline
+27&\[\sin\omega t-\omega t\cos\omega t\]&\[\frac{2\omega^3}{(s^2+\omega^2)^2}\]\\
+\hline
+28&\[\frac{1}{2\omega}t\sin\omega t\]&\[\frac{s}{(s^2+\omega^2)^2}\]\\
+\hline
+29&\[t\cos\omega t\]&\[\frac{s^2-\omega^2}{(s^2+\omega^2)^2}\]\\
+\hline
+30&\[\frac{1}{\omega_2^2-\omega_1^2}(\cos\omega_1t-\cos\omega_2t)\qquad(\omega_1^2\neq\omega_2^2)\]&\[\frac{s}{(s^2+\omega_1^2)(s^2+\omega_2^2)}\]\\
+\hline
+31&\[\frac{1}{2\omega}(\sin\omega t+\omega t\cos\omega t)\]&\[\frac{s^2}{(s^2+\omega^2)^2}\]\\
+\hline
+
+\end{tabular}
+
+\newpage
+
+\noindent\textsf{\textbf{TABLE 2} Properties of Laplace Transforms}\\
+\begin{tabular}{|C{1cm}|C{12cm}|}
+\hline
+1&\[\lap[Af(t)]=AF(s)\]\\
+\hline
+2&\[\lap[f_1(t)\pm f_2(t)]=F_1(s)\pm F_2(s)\]\\
+\hline
+3&\[\lap_\pm\left[\diff{}{t}f(t)\right]=sF(s)-f(0\pm)\]\\
+\hline
+4&\[\lap_\pm\left[\diff[2]{}{t}f(t)\right]=s^2F(s)-sf(0\pm)-\dot f(0\pm)\]\\
+\hline
+5&\[\lap_\pm\left[\diff[n]{}{t}f(t)\right]=s^nF(s)-\sum_{k=1}^{n}s^{n-k}f^{(k-1)}(0\pm)\]\[\text{where}\ f^{(k-1)}(t)=\diff[k-1]{}{t}f(t)\]\\
+\hline
+6&\[\lap_\pm\left[\int f(t)\,dt\right]=\frac{F(s)}{s}+\frac{[\int f(t)\,dt]_{t=0\pm}}{s}\]\\
+\hline
+7&\[\lap_\pm\left[\iint f(t)\,dt\,dt\right]=\frac{F(s)}{s^2}+\frac{[\int f(t)\,dt]_{t=0\pm}}{s^2}+\frac{[\iint f(t)\,dt\,dt]_{t=0\pm}}{s}\]\\
+\hline
+8&\[\lap_\pm\left[\idotsint f(t)(dt)^n\right]=\frac{F(s)}{s^n}+\sum_{k=1}^n\frac{1}{s^{n-k+1}}\left[\idotsint f(t)(dt)^k\right]_{t=0\pm}\]\\
+\hline
+9&\[\lap\left[\int_0^tf(t)\,dt\right]=\frac{F(s)}{s}\]\\
+\hline
+\end{tabular}
+
+
+\newpage
+
+\noindent\textsf{\textbf{TABLE 2} \textit{(continued)}}\\
+\begin{tabular}{|C{1cm}|C{12cm}|}
+\hline
+10&\[\int_0^\infty f(t)\,dt=\lim_{s\to0}F(s)\qquad\text{if}\int_0^\infty f(t)\,dt\ \text{exists}\]\\
+\hline
+11&\[\lap\left[e^{-at}f(t)\right]=F(s+a)\]\\
+\hline
+12&\[\lap[f(t-\alpha)1(t-\alpha)]=e^{-\alpha s}F(s)\qquad\alpha\geq0\]\\
+\hline
+13&\[\lap[tf(t)]=-\diff{F(s)}{s}\]\\
+\hline
+14&\[\lap[t^2f(t)]=\diff[2]{}{s}F(s)\]\\
+\hline
+15&\[\lap[t^nf(t)]=(-1)^n\diff[n]{}{s}F(s)\qquad n=1,2,3,\ \ldots\]\\
+\hline
+16&\[\lap\left[\frac{1}{t}f(t)\right]=\int_s^\infty F(s)\,ds\qquad\text{if}\ \lim_{t\to0}\frac{1}{t}f(t)\ \text{exists}\]\\
+\hline
+17&\[\lap\left[f\left(\frac{t}{a}\right)\right]=aF(as)\]\\
+\hline
+\end{tabular}
+\end{document}
